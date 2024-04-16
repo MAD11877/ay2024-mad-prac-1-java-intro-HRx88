@@ -50,6 +50,7 @@ public class Question5
             mode = arr[i];
         }
     }
+    System.out.println(mode);
     
   }
 }
