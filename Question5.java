@@ -27,6 +27,30 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
+    int num = in.nextInt();
+    int[] arr = new int[num];
+    for(int i = 0; i < num; i++){
+      arr[i] = in.nextInt();
+      
+    }
+    int mode = 0;
+    int maxFrequency = 0;
+
+    // Loop through each element to find the mode
+    for (int i = 0; i < num; i++) {
+        int frequency = 0;
+        for (int j = 0; j < num; j++) {
+            if (arr[j] == arr[i]) {
+                frequency++;
+            }
+        }
+        // Update mode and maxFrequency if a new mode is found
+        if (frequency > maxFrequency) {
+            maxFrequency = frequency;
+            mode = arr[i];
+        }
+    }
+    System.out.println(mode);
     
   }
 }
